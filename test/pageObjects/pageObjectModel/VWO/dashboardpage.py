@@ -1,21 +1,15 @@
+from selenium.webdriver.common.by import By
+from test.utils.common_utils import webdriver_wait
 
 # Dashboard Page Class
-
-# Page Locators
-# Page Actions
-
-
-from selenium.webdriver.common.by import By
-from test.utils.commom_utils import webdriver_wait
-
-
 class DashboardPage:
     def __init__(self, driver):
         self.driver = driver
 
+    # Page Locators
     user_logged_in = (By.XPATH, "//span[@data-qa='lufexuloga']")
 
-
+    # Page Actions
     def get_user_logged_in(self):
         return self.driver.find_element(*DashboardPage.user_logged_in)
 

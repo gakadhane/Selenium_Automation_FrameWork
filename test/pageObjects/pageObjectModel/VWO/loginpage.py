@@ -1,10 +1,7 @@
-# Login page Class
-import time
-
 from selenium.webdriver.common.by import By
-from test.utils.commom_utils import webdriver_wait
+from test.utils.common_utils import webdriver_wait
 
-
+# Login page Class
 class LoginPage:
     def __init__(self, driver):
         self.driver = driver
@@ -14,21 +11,20 @@ class LoginPage:
     password = (By.NAME, "password")
     submit_button = (By.XPATH, "//button[@id='js-login-btn']")
     error_message = (By.CSS_SELECTOR, "#js-notification-box-msg")
-
-    # Remove them if you are not using them as of now
-
     free_trail = (By.XPATH, "//a[normalize-space()='Start a free trial']")
 
+    # Remove them if you are not using them as of now
     # forgot_password_button = (By.XPATH, "//button[normalize-space()='Forgot Password?']")
     # sso_login = (By.XPATH, "//button[normalize-space()='Sign in using SSO']")
     # remember_checkbox = (By.XPATH, "//label[@for='checkbox-remember']//span[@class='checkbox-radio-button ng-scope']//*[name()='svg']")
 
     # Page Actions
-
     def get_username(self):
+        webdriver_wait(driver=self.driver, element_tuple=self.username, timeout=5)
         return self.driver.find_element(*LoginPage.username)
 
     def get_password(self):
+        webdriver_wait(driver=self.driver, element_tuple=self.password, timeout=5)
         return self.driver.find_element(*LoginPage.password)
 
     def get_submit_button(self):

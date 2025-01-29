@@ -1,6 +1,3 @@
-import allure
-
-
 class Constants:
     def __init__(self):
         print("constants loaded")

@@ -1,22 +1,19 @@
-import allure
-import pytest
-import time
+import os
 
+import pytest
+
+from dotenv import load_dotenv
 from selenium import webdriver
+from selenium.common.exceptions import TimeoutException
+from test.constants.constants import Constants
+from test.pageObjects.pageObjectModel.VWO.dashboardpage import DashboardPage
+from test.pageObjects.pageObjectModel.VWO.loginpage import LoginPage
+from test.utils.Utils import *
 
 # Assertions and use the Page Object class
-
 # Webdriver Start
 # User Interaction + Assertions
 # Close Webdriver
-
-
-from test.constants.constants import Constants
-from test.pageObjects.pageObjectModel.vwo.loginPage import LoginPage
-from test.pageObjects.pageObjectModel.vwo.dashboardPage import DashboardPage
-from dotenv import load_dotenv
-import os
-from test.utils.Utils import *
 
 
 @pytest.fixture()

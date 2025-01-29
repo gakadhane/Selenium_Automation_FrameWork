@@ -1,22 +1,18 @@
-# Dashboard Page Class
-
-# Page Locators
-# Page Actions
-
-
 from selenium.webdriver.common.by import By
-from test.utils.commom_utils import webdriver_wait
+from test.utils.common_utils import webdriver_wait
 
-
+# Freetrial Page Class
 class FreeTrialPage:
     def __init__(self, driver):
         self.driver = driver
 
+    # Page Locators
     username_email_ft = (By.XPATH, "//input[@id='page-v1-step1-email']")
     button_click_ft = (By.XPATH, "//button[normalize-space()='Create a Free Trial Account']")
-    checkbox_terms = (By.XPATH, "//input[@id='page-756cu-gdpr-consent-checkbox']")
+    checkbox_terms = (By.XPATH, "//input[@id='page-278cu-gdpr-consent-checkbox']")
     error_msg_invalid_email = (By.XPATH, "//div[normalize-space()='The email address you entered is incorrect.']")
 
+    # Page Actions
     def get_username_ft(self):
         webdriver_wait(driver=self.driver, element_tuple=self.username_email_ft, timeout=5)
         return self.driver.find_element(*FreeTrialPage.username_email_ft)

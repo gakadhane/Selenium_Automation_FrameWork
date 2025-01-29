@@ -1,22 +1,17 @@
-import allure
 import pytest
-import time
-
+from dotenv import load_dotenv
 from selenium import webdriver
+from test.pageObjects.pageObjectModel.VWO.freetrialpage import FreeTrialPage
+from test.pageObjects.pageObjectModel.VWO.loginpage import LoginPage
+
+from test.constants.constants import Constants
+from test.utils.Utils import *
+
 
 # Assertions and use the Page Object class
-
 # Webdriver Start
 # User Interaction + Assertions
 # Close Webdriver
-
-
-from test.constants.constants import Constants
-from test.pageObjects.pageObjectModel.vwo.loginPage import LoginPage
-from test.pageObjects.pageObjectModel.vwo.freeTrialPage import FreeTrialPage
-from dotenv import load_dotenv
-import os
-from test.utils.Utils import *
 
 
 @pytest.fixture()
