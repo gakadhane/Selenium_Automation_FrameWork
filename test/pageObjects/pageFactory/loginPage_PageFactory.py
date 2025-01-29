@@ -1,16 +1,16 @@
-# Page Locators
-# Page Actions
-
 from seleniumpagefactory.Pagefactory import PageFactory
-from test.utils.commom_utils import *
+from test.utils.common_utils import *
+from selenium.webdriver.common.by import By
 
 
 class LoginPage(PageFactory):
 
     def __init__(self, driver):
         self.driver = driver
+        self.timeout = 5
         self.highlight = True
 
+    # Page Locators
     locators = {
         'username': ('CSS', "#login-username"),
         'password': ('NAME', 'password'),
@@ -18,6 +18,7 @@ class LoginPage(PageFactory):
         'submit_button': ('XPATH', '//button[@id="js-login-btn"]')
     }
 
+    # Page Actions
     def login_to_vwo(self, usr, pwd):
         self.username.set_text(usr)
         self.password.set_text(pwd)

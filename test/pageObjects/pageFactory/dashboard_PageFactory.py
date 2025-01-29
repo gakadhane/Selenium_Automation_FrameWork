@@ -1,5 +1,5 @@
 from seleniumpagefactory.Pagefactory import PageFactory
-from test.utils.commom_utils import *
+from test.utils.common_utils import *
 
 
 class DashboardPage(PageFactory):

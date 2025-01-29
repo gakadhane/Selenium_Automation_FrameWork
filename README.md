@@ -26,6 +26,7 @@
 - pip install mysql-connector-python
 - pip install pytest-reportportal
 - pip install python-dotenv
+- pip install selenium-page-factory
 - pip list
 - pip install --upgrade pip
 - pip install --upgrade selenium
