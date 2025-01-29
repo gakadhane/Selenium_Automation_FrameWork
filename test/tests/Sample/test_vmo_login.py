@@ -1,15 +1,13 @@
-from selenium import webdriver
-import allure
-import pytest
+import os
 import time
 
-from selenium.webdriver.common.by import By
-from selenium.webdriver.chrome.options import Options
-
+import pytest
 from dotenv import load_dotenv
-import os
-from test.utils.Utils import *
+from selenium import webdriver
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 
+from test.utils.Utils import *
 from test.utils.Utils import take_screen_shot
 
 
@@ -42,7 +40,6 @@ def test_app_vwo_login_chrome():
 
     take_screen_shot(driver=driver, name="vwoLogin_Step1")
 
-
     email_web_element = driver.find_element(By.ID, "login-username")
     email_web_element.send_keys(os.getenv("INVALID_USERNAME"))
 
@@ -53,7 +50,6 @@ def test_app_vwo_login_chrome():
     submit_btn_web_element.click()
 
     take_screen_shot(driver=driver, name="vwoLogin_Step2")
-
 
     time.sleep(3)
 
