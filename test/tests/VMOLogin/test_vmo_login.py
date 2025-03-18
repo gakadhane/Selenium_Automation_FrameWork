@@ -1,5 +1,6 @@
 import os
 
+import allure
 import pytest
 
 from dotenv import load_dotenv
@@ -9,6 +10,9 @@ from test.constants.constants import Constants
 from test.pageObjects.pageObjectModel.VWO.dashboardpage import DashboardPage
 from test.pageObjects.pageObjectModel.VWO.loginpage import LoginPage
 from test.utils.Utils import *
+
+from Selenium_Automation_FrameWork.test.utils.Utils import take_screen_shot
+
 
 # Assertions and use the Page Object class
 # Webdriver Start

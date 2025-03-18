@@ -1,5 +1,15 @@
 # Web Automation Framework with POM in Python(Selenium)
 
+Search Google "Python selenium install" ==> https://pypi.org/project/selenium/
+copy and pest in CMD and enter
+
+selenium and web driver-manager
+
+chrome driver search 
+                                    
+https://storage.googleapis.com/chrome-for-testing-public/131.0.6778.85/win64/chromedriver-win64.zip
+
+
 ### Tech Stack
 
 - Python, PyTest
@@ -12,7 +22,7 @@
 - MY SQL data base connect to verify data.
 
 ### All the dependencies used
-
+PIP install before executing pytest
 - pip install pytest
 - pip install selenium
 - pip install pytest-html
@@ -27,6 +37,10 @@
 - pip install pytest-reportportal
 - pip install python-dotenv
 - pip install selenium-page-factory
+- pip install pyyaml
+- pip install behave-to-cucumber
+- pip install behave
+- pip install requests pytest pytest-html faker allure-pytest jsonschema
 - pip list
 - pip install --upgrade pip
 - pip install --upgrade selenium
