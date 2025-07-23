@@ -87,3 +87,23 @@ File Explain:
 A README.md file is typically used to provide information about your project,
 including an overview, installation instructions, usage guidelines, and more.
 It's written in Markdown, which is a lightweight markup language.
+
+
+
+File Explain:
+
+A ".env" file is used to store environment variables that your application needs to run.
+This file is particularly useful for keeping sensitive information, such as API keys,
+database credentials, and configuration settings, separate from your source code.
+
+In your Python application, you can use libraries like "python-dotenv" to load
+these variables into your environment.
+
+Here’s an example of how to do that:
+First, install the python-dotenv package:
+-pip install python-dotenv
+
+Then, create a .env file with your environment variables as shown above.
+Finally, load the variables in your Python script:
+from dotenv import load_dotenv
+import os
